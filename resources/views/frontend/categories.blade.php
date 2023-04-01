@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             @foreach($categories as $category)
-                <div class="col-md-4 mt-4">
+                <div class="col-md-15 mt-4">
                     <a href="{{ url('/collections/'.$category->slug) }}">
                         <div class="card">
                             <div class="card-body">
@@ -12,7 +12,7 @@
                             @if(count($category->posts) > 0)
                                     <ul>
                                         @foreach($category->posts as $item)
-                                            <li>{{ $item->title }} - {{ $item->description }}</li>
+                                            <li>{{ $item->title }} - {{ $item->description }} - <img src="{{ asset('images/' . $item->image) }}"/></li>
                                         @endforeach
                                     </ul>
                                 @else

@@ -48,7 +48,6 @@
                                     <td>{{ $category->id }}</td>
                                     <td>{{ $category->name }}</td>
                                     <td>
-                                        <a href="{{ url('admin/category/'.$category->id.'/edit') }}" class="btn btn-primary">Edit</a>
                                         <form action="{{ url('admin/category/'.$category->id) }}" method="post" style="display: inline-block">
                                             @csrf
                                             @method('DELETE')
